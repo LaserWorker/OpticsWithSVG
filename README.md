@@ -4,14 +4,14 @@
 
 ###All-EM-Waves
 
-######The display of the Electro-Magnetic spectrum of waves. This is a basic minimal interactive display of mathematical, scientific and leagalistic aspects of electromagnetism.
+The display of the Electro-Magnetic spectrum of waves. This is a basic minimal interactive display of mathematical, scientific and leagalistic aspects of electromagnetism.
 
 ###Beginning
-######A higly interactive display of historical sources for mathematical systems that define electromagnetism.
+A higly interactive display of historical sources for mathematical systems that define electromagnetism.
 
 ###Linear Optics Tool
 
-######A simplistic program to simulate basic optical systems with geometrical mathematics.
+A simplistic program to simulate basic optical systems with geometrical mathematics.
 
 ##See Latest Outputs:
 
