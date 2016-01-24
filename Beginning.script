@@ -1,0 +1,607 @@
+
+var svg  = document.documentElement,
+    w = window.innerWidth,
+    h = window.innerHeight,
+    Xmid = w / 2,
+    Ymid = h / 2,
+    X = Xmid / 2,
+    Y = Ymid / 2,
+    startCircle = document.querySelector('#Start'),         //Object Circle to define the center
+    Detect = document.querySelector('#SetDetect'),          //to be clicked on 
+    R = 50,
+    RS = R * 0.2,
+    DM = 5,
+    NumberOfCircles = 0,
+    CCircle = startCircle,
+    NCircle = CCircle;
+    
+
+
+function CreateCircle(Number) {
+    var ID = "S" + Number,
+        CreatedC = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    CreatedC.setAttributeNS(null, "cx", "0");
+    CreatedC.setAttributeNS(null, "cy", "-50000000");
+    CreatedC.setAttributeNS(null, "r", "25");
+    CreatedC.setAttributeNS(null, "stroke", "white");
+    CreatedC.setAttributeNS(null, "stroke-width", "0");
+    CreatedC.setAttributeNS(null, "fill", "url(#grad)");
+    CreatedC.setAttributeNS(null, "onmouseover", "Mouse('" + ID + "')");
+    CreatedC.setAttributeNS(null, "id", ID);
+    CreatedC.setAttributeNS(null, "onclick", "Clicked('" + ID + "')");
+    return (CreatedC);
+}
+
+function CreateLine(XA, YA, XB, YB, ID) {
+//prompt("creating line" + ID);
+     var L = document.createElementNS("http://www.w3.org/2000/svg", "line");
+     L.setAttributeNS(null, "x1", XA);
+     L.setAttributeNS(null, "x2", XB);
+     L.setAttributeNS(null, "y1", YA);
+     L.setAttributeNS(null, "y2", YB);
+     L.setAttributeNS(null, "id", ID);
+     L.setAttributeNS(null, "style", "stroke:rgb(255,255,255); stroke-width:1");
+     L.appendChild(CreateAnimate("x2", "indefinite", "onclick", "10s", "freeze", XA, XB, "MakeX"));
+    L.appendChild(CreateAnimate("y2", "indefinite", "onclick", "10s", "freeze", YA, YB, "MakeY"));
+    document.querySelector("#CSet").appendChild(L);
+    L.querySelector("#MakeX").beginElement();
+    L.querySelector("#MakeY").beginElement();
+}
+
+function BuildLine(CX, CY, CC, C) {
+     for (var NC=0; NC < Math.round(1+NumberOfCircles); NC++){
+        var ID = '#S' + NC
+	CC = document.querySelector(ID);
+        var IDA = 'L' + NC + 'S' + C,
+            IDB = 'L' + C + 'S' + NC,
+            AX = CC.getAttribute('cx'),
+            AY = CC.getAttribute('cy'),
+            Cka = document.querySelector("#"+IDA),
+            Ckb = document.querySelector("#"+IDB),
+            D = Math.sqrt((AX - CX)*(AX - CX) + (AY - CY)*(AY - CY));
+if(Cka === null) { if(Ckb === null) {
+if(D < R*(DM + 0.8)){
+    if(D > R*(DM + 0.2)){
+        CreateLine(AX, AY, CX, CY, IDA);
+    }
+}
+
+}}
+
+        }
+}
+
+
+function RemoveLines(N) {
+    for (var NC=0; NC < Math.round(1+NumberOfCircles); NC++){
+        var IDA = 'L' + NC + 'S' + N,
+            IDB = 'L' + N + 'S' + NC,
+            Cka = document.querySelector("#"+IDA),
+            Ckb = document.querySelector("#"+IDB);
+        if(Cka === null) {}
+        else{
+            Cka.remove();
+        }
+        if(Ckb === null) {}
+        else{
+            Ckb.remove();
+        }
+    }
+}
+
+function FromCircleBuildLines(CC, N) {
+     var CX = CC.getAttribute('cx'),
+	 CY = CC.getAttribute('cy');
+     BuildLine(CX, CY, CC, N);
+     BuildLine(CX, CY, CC, N);
+     BuildLine(CX, CY, CC, N);
+     BuildLine(CX, CY, CC, N);
+     BuildLine(CX, CY, CC, N);
+     BuildLine(CX, CY, CC, N);
+}
+
+function RemoveCircle(CC) {
+    if (CC === "#Start"){
+        startCircle = document.querySelector('#S0')
+        document.querySelector("#Start").remove();
+        document.querySelector("#S0").appendChild(new CreateAnimate("r", "indefinite", "onclick", "5s", "freeze", RS, R, "BGS"));
+        document.querySelector("#S0").appendChild(new CreateAnimate("stroke-width", "mouseover", "onclick", "10s", "freeze", "0", "1", "B"));
+        document.querySelector("#S0").appendChild(new CreateAnimate("stroke-width", "indefinite", "onclick", "10s", "freeze", "1", "0", "D"));
+    }
+    if (CC.querySelector("#DisPer") === null) {
+        if (CC.getAttribute('fill') === "white") {
+            CC.setAttribute('fill', "url(#grad)");
+        }
+        CC.appendChild(CreateAnimate("r", "indefinite", "onclick", "6s", "freeze", R, RS, "DisPer"));
+        CC.querySelector("#DisPer").beginElement();
+    }
+}
+
+function ReGrowC(N) {
+    var ID = "#S" + N,
+        CC = document.querySelector(ID).querySelector("#DisPer");
+    if(CC === null) {}else{
+        CC.remove();
+        CC = document.querySelector(ID);
+        CC.querySelector("#BGS").beginElement();
+    }
+}
+
+function AddDimension() {
+    var NumberofLayers = Math.round(1 + (NumberOfCircles - 1)/3),
+	NewNumberOfCircles = 2 * NumberOfCircles;
+}
+
+function AddLines() {
+for (var NB=0; NB < Math.round(1+NumberOfCircles); NB++){
+        var ID = '#S' + NB,
+        Check = document.querySelector(ID);
+if(NB > 36) {
+        FromCircleBuildLines(Check, NB);
+}
+        RemoveCircle(Check);
+        }
+        RemoveCircle("#Start");
+}
+
+
+function Rotate() {
+
+}
+
+function TextChange(A, B) {
+    B.setAttribute('y', "-20000000000");
+    B.setAttribute('transform', "translate(-10000, -1000000)");
+    A.setAttribute('y', 1);
+    A.setAttribute('transform', "translate(0, 0)");
+    A.setAttribute('fill', "white");
+    A.setAttribute('font-size', R/4);
+}
+
+function DCheck (Value, Name, Replace) {
+    for (var N=Math.round(NumberOfCircles-1); N < Math.round(20 + NumberOfCircles); N++){
+        var ID = '#S' + N,
+            Check = document.querySelector(ID).getAttribute(Name);
+        if (Math.round(Value) === Math.round(Check)) {
+            Value = Replace;
+        }
+    }
+    return (Value);
+}
+
+function CreateAnimate(Attribute, Begin, End, Duration, FinalState, Start, Finnish, ID) {
+    var ElementAnimate = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+    ElementAnimate.setAttributeNS(null, "attributeName", Attribute);
+    ElementAnimate.setAttributeNS(null, "attributeType", "XML");
+    ElementAnimate.setAttributeNS(null, "begin", Begin);
+    ElementAnimate.setAttributeNS(null, "end", End);
+    ElementAnimate.setAttributeNS(null, "dur", Duration);
+    ElementAnimate.setAttributeNS(null, "fill", FinalState);
+    ElementAnimate.setAttributeNS(null, "from", Start);
+    ElementAnimate.setAttributeNS(null, "to", Finnish);
+    ElementAnimate.setAttributeNS(null, "id", ID);
+    return (ElementAnimate);
+}
+
+function NewCircle(NtM, NewX, NewY, R) {
+    if (NumberOfCircles < 37) {
+        document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 20)));
+    }
+    NumberOfCircles = NumberOfCircles + 1;
+    var ID = NtM.getAttribute('id');
+    NtM.setAttribute('cx', NewX);
+    NtM.setAttribute('cy', NewY);
+    NtM.setAttribute('r', RS);
+    NtM.setAttribute('fill', "url(#grad)");
+    NtM.appendChild(new CreateAnimate("r", "indefinite", "onclick", "5s", "freeze", RS, R, "BGS"));
+    NtM.appendChild(new CreateAnimate("stroke-width", "mouseover", "onclick", "10s", "freeze", "0", "1", "B"));
+    NtM.appendChild(new CreateAnimate("stroke-width", "indefinite", "onclick", "10s", "freeze", "1", "0", "D"));
+    NtM.querySelector("#BGS").beginElement();
+    
+    NtM.setAttributeNS(null, "onclick", "DimmerOutline('" + ID + "')");
+}
+
+function DimmerOutline(ID){
+    ID = document.querySelector("svg").querySelector("#CSet").querySelector("#"+ID);
+    ID.querySelector("#D").beginElement();
+}
+        
+function SetUp() {
+    startCircle.setAttribute('cx', Xmid);
+    startCircle.setAttribute('cy', Ymid);
+    var VB = "0 0 " + w + " " + h;
+    svg.setAttribute('viewbox', VB);
+    startCircle.appendChild(new CreateAnimate("r", "indefinite", "mouseover", "20s", "freeze", "25", Ymid / 2, "BGS"));
+    startCircle.appendChild(new CreateAnimate("stroke-width", "mouseover", "onclick", "10s", "freeze", "0", "1", "B"));
+    startCircle.setAttribute('r', startCircle.querySelector("#BGS").getAttribute("to")/2);
+    startCircle.querySelector("#BGS").beginElement();
+}
+
+function DIntercectPoint(R, A, B, C) {
+    A = document.querySelector(A);
+    B = document.querySelector(B);
+    var Ax = parseFloat(A.getAttribute('cx')),
+        Ay = parseFloat(A.getAttribute('cy')),
+        Bx = parseFloat(B.getAttribute('cx')),
+        By = parseFloat(B.getAttribute('cy')),
+        Point = document.querySelector(C),
+        cx = (Ax + Bx) / 2,
+        cy = (Ay + By) / 2,
+        dx = parseFloat(Ax) - parseFloat(Bx),
+        dy = parseFloat(Ay) - parseFloat(By),
+        m  = dy / dx,
+        mp = -(dx / dy),
+        d = R * Math.sqrt(3) / 2;
+    
+    dx = Math.abs(d / Math.sqrt(mp * mp + 1));
+    dy = dx * mp;
+    
+    var x1 = (cx + dx),
+        x2 = (cx - dx),
+        y1 = (cy + dy),
+        y2 = (cy - dy);
+    
+   //prompt (" " + x1 + " " + x2 + " " + y1 + " " + y2 + " ","");
+    x1 = DCheck(x1, "cx", x2);
+    y1 = DCheck(y1, "cy", y2);
+    
+    x2 = DCheck(x2, "cx", x1);
+    y2 = DCheck(y2, "cy", y1);
+
+    Point.setAttribute('cx', x2);
+    Point.setAttribute('cy', y2);
+    Point.setAttribute('r', RS);
+    Point.setAttribute('fill', "white");
+}
+
+function SlopeOut(A, B, N, C) {
+    var ID = "#S" + N,
+        Ax = parseFloat(A.getAttribute('cx')),
+        Ay = parseFloat(A.getAttribute('cy')),
+        Bx = parseFloat(B.getAttribute('cx')),
+        By = parseFloat(B.getAttribute('cy')),
+        cx = (Ax + Bx) / 2,
+        cy = (Ay + By) / 2,
+        dx = Ax - Bx,
+        dy = Ay - By,
+        m  = dy / dx,
+        mp = -(dx / dy),
+        d = R * Math.sqrt(3) / 2;
+    
+    dx = Math.abs(d / Math.sqrt(mp * mp + 1));
+    dy = dx * mp;
+    
+    var x1 = (cx + dx),
+        x2 = (cx - dx),
+        y1 = (cy + dy),
+        y2 = (cy - dy),
+        xc = C.getAttribute('cx'),
+        yc = C.getAttribute('cy');
+    if (Math.round(x1) === Math.round(xc)){
+        cx = x2;
+        cy = y2;
+    }
+    if (Math.round(x2) === Math.round(xc)){
+        cx = x1;
+        cy = y1;
+    }
+    if (Math.round(y1) === Math.round(yc)){
+        cx = x2;
+        cy = y2;
+    }
+    if (Math.round(y2) === Math.round(yc)){
+        cx = x1;
+        cy = y1;
+    }
+    
+    Dtct = document.querySelector(ID);
+    Dtct.setAttribute('cx', cx);
+    Dtct.setAttribute('cy', cy);
+    Dtct.setAttribute('r', RS);
+    Dtct.setAttribute('fill', "white");
+}
+
+function FrutOut(A, B, V) {
+    A = document.querySelector('#S' + A);
+    X = document.querySelector('#S' + B).getAttribute('cx');
+    Y = document.querySelector('#S' + B).getAttribute('cy');
+    X = Xmid + (V * (X - Xmid));
+    Y = Ymid + (V * (Y - Ymid));
+    A.setAttribute('cx', X);
+    A.setAttribute('cy', Y);
+    A.setAttribute('r', RS);
+    A.setAttribute('fill', "white");
+}
+
+function FlowerStart() {
+	
+	FrutOut(31, 13, 1.5);
+	FrutOut(32, 14, 1.5);
+	FrutOut(33, 15, 1.5);
+	FrutOut(34, 16, 1.5);
+	FrutOut(35, 17, 1.5);
+	FrutOut(36, 18, 1.5);
+
+}
+
+function FrutDone(){
+    var A = document.querySelector('#S7'),
+        B = document.querySelector('#S8'),
+        C = document.querySelector('#S9'),
+        D = document.querySelector('#S10'),
+        E = document.querySelector('#S11'),
+        F = document.querySelector('#S12'),
+        G = document.querySelector('#S13'),
+        H = document.querySelector('#S14'),
+        I = document.querySelector('#S15'),
+        J = document.querySelector('#S16'),
+        K = document.querySelector('#S17'),
+        L = document.querySelector('#S18');
+    
+    SlopeOut(A, G, 19, document.querySelector('#S1'));
+    SlopeOut(A, H, 20, document.querySelector('#S2'));
+    
+    SlopeOut(B, H, 21, document.querySelector('#S2'));
+    SlopeOut(B, I, 22, document.querySelector('#S3'));
+    
+    SlopeOut(C, I, 23, document.querySelector('#S3'));
+    SlopeOut(C, J, 24, document.querySelector('#S4'));
+    
+    SlopeOut(D, J, 25, document.querySelector('#S4'));
+    SlopeOut(D, K, 26, document.querySelector('#S5'));
+    
+    SlopeOut(E, K, 27, document.querySelector('#S5'));
+    SlopeOut(E, L, 28, document.querySelector('#S6'));
+    
+    SlopeOut(F, L, 29, document.querySelector('#S6'));
+    SlopeOut(F, G, 30, document.querySelector('#S1'));
+    
+}
+
+function SeedDone() { 
+    var Vaulted = document.querySelector('#Vault');
+    Vaulted.setAttribute('cx', Xmid);
+    Vaulted.setAttribute('cy', Ymid);
+    Vaulted.setAttribute('r', R * 2);
+    
+    var A = document.querySelector('#S1'),
+        B = document.querySelector('#S2'),
+        C = document.querySelector('#S3'),
+        D = document.querySelector('#S4'),
+        E = document.querySelector('#S5'),
+        F = document.querySelector('#S6');
+    
+    SlopeOut(A, B, 7, startCircle);
+    SlopeOut(B, C, 8, startCircle);
+    SlopeOut(C, D, 9, startCircle);
+    SlopeOut(D, E, 10, startCircle);
+    SlopeOut(E, F, 11, startCircle);
+    SlopeOut(A, F, 12, startCircle);
+    
+}
+
+function EggDone() {
+    var Seeded = document.querySelector('#Seed'),
+        Egged = document.querySelector('#Egg'),
+        EggR = R * Math.sqrt(3),
+        EggR = (parseFloat(EggR) + parseFloat(R));
+    Seeded.setAttribute('cx', Xmid);
+    Seeded.setAttribute('cy', Ymid);
+    Seeded.setAttribute('r', R * Math.sqrt(3));
+    //prompt(" " +EggR+ " ", "")
+    Egged.setAttribute('cx', Xmid);
+    Egged.setAttribute('cy', Ymid);
+    Egged.setAttribute('r', EggR);
+    FrutOut(13, 1, 2);
+    FrutOut(14, 2, 2);
+    FrutOut(15, 3, 2);
+    FrutOut(16, 4, 2);
+    FrutOut(17, 5, 2);
+    FrutOut(18, 6, 2);
+}
+
+function Mouse(Node) {
+    CCircle = document.querySelector(Node);
+}
+
+function Shift(Distance) {
+    DM = Distance;
+    AddDimension();
+    AddLines();
+    Rotate();
+}
+
+function UnShift() {
+    for (var N=0; N < Math.round(1 + NumberOfCircles); N++){
+        RemoveLines(N);
+        ReGrowC(N);
+    }
+}
+function addlastcircles() {
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 19)));
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 20)));
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 21)));
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 22)));
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 23)));
+    document.querySelector("svg").querySelector("#CSet").appendChild(new CreateCircle(Math.round(NumberOfCircles + 24)));
+    
+    var A = document.querySelector('#S19'),
+        B = document.querySelector('#S20'),
+        C = document.querySelector('#S21'),
+        D = document.querySelector('#S22'),
+        E = document.querySelector('#S23'),
+        F = document.querySelector('#S24'),
+        G = document.querySelector('#S25'),
+        H = document.querySelector('#S26'),
+        I = document.querySelector('#S27'),
+        J = document.querySelector('#S28'),
+        K = document.querySelector('#S29'),
+        L = document.querySelector('#S30'),
+        M = document.querySelector('#S31'),
+        T = document.querySelector('#S32'),
+        O = document.querySelector('#S33'),
+        P = document.querySelector('#S34'),
+        Q = document.querySelector('#S35'),
+        S = document.querySelector('#S36');
+    
+    SlopeOut(A, B, 37, document.querySelector('#S7'));
+    SlopeOut(C, D, 38, document.querySelector('#S8'));
+    SlopeOut(E, F, 39, document.querySelector('#S9'));
+    SlopeOut(G, H, 40, document.querySelector('#S10'));
+    SlopeOut(I, J, 41, document.querySelector('#S11'));
+    SlopeOut(K, L, 42, document.querySelector('#S12'));
+    
+    SlopeOut(A, M, 43, document.querySelector('#S13'));
+    SlopeOut(C, T, 44, document.querySelector('#S14'));
+    SlopeOut(E, O, 45, document.querySelector('#S15'));
+    SlopeOut(G, P, 46, document.querySelector('#S16'));
+    SlopeOut(I, Q, 47, document.querySelector('#S17'));
+    SlopeOut(K, S, 48, document.querySelector('#S18'));
+    
+    SlopeOut(B, T, 49, document.querySelector('#S14'));
+    SlopeOut(D, O, 50, document.querySelector('#S15'));
+    SlopeOut(F, P, 51, document.querySelector('#S16'));
+    SlopeOut(H, Q, 52, document.querySelector('#S17'));
+    SlopeOut(J, S, 53, document.querySelector('#S18'));
+    SlopeOut(L, M, 54, document.querySelector('#S13'));
+    
+    var F = 1.0 + 1.0/3.0;
+	FrutOut(55, 31, F);
+	FrutOut(56, 32, F);
+	FrutOut(57, 33, F);
+	FrutOut(58, 34, F);
+	FrutOut(59, 35, F);
+	FrutOut(60, 36, F);
+}
+
+function Clicked(Node) {
+    var line = document.querySelector('line'),
+        PCNID = "#S" + Math.round(NumberOfCircles - 1),
+        CCNID = "#S" + Math.round(NumberOfCircles),
+        NCNID = "#S" + Math.round(NumberOfCircles + 1),
+        C = "#S" + Math.round(NumberOfCircles + 2),
+        D = "#S" + Math.round(NumberOfCircles + 7),
+        E = "#S" + Math.round(NumberOfCircles + 6),
+        PCircle = document.querySelector(PCNID),
+        TxT = document.querySelector("#Scripture").querySelector("#BGenesis");
+    NCircle = document.querySelector(NCNID);
+    CCircle = document.querySelector(CCNID);
+    R = startCircle.getAttribute('r');
+    
+    if (0 < Math.round(NumberOfCircles)) {
+        
+        CCircle = document.querySelector("#" + Node);
+        X = CCircle.getAttribute('cx');
+        Y = CCircle.getAttribute('cy');
+        
+        if (NumberOfCircles < 6) {
+            CCircle = document.querySelector(NCNID);
+        }
+        NewCircle(CCircle, X, Y, R);
+        
+        if (NumberOfCircles === 36) {
+            addlastcircles();
+        }
+
+
+        if (NumberOfCircles === 30) {
+            new FlowerStart();
+            ATxT = TxT.querySelector("#SixthDay");
+            BTxT = TxT.querySelector("#FithDay");
+        }
+        
+        if (NumberOfCircles === 18) {
+            new FrutDone();
+            ATxT = TxT.querySelector("#FithDay");
+            BTxT = TxT.querySelector("#FourthDay");
+        }
+        
+        if (NumberOfCircles === 12) {
+            new EggDone();
+            ATxT = TxT.querySelector("#FourthDay");
+            BTxT = TxT.querySelector("#ThirdDay");
+        }
+        
+        if (NumberOfCircles === 6) {
+            new SeedDone();
+            ATxT = TxT.querySelector("#ThirdDay");
+            BTxT = TxT.querySelector("#SecondDay");
+        }
+        
+        if (NumberOfCircles === 3) {
+            ATxT = TxT.querySelector("#SecondDay");
+            BTxT = TxT.querySelector("#FirstDay");
+        }
+        if (NumberOfCircles === 2) {
+            document.querySelector("#S5").setAttribute('cx', Xmid);
+            document.querySelector("#S5").setAttribute('cy', Ymid);
+            document.querySelector("#S9").setAttribute('cx', Xmid);
+            document.querySelector("#S9").setAttribute('cy', Ymid);
+            ATxT = TxT.querySelector("#FirstDay");
+            BTxT = TxT.querySelector("#ZeroDay");                     
+        }
+    }
+    
+    if (NumberOfCircles === 0) {
+        if (Node === 'Start') {
+            X = line.getAttribute('x2');
+            Y = line.getAttribute('y2');
+            NewCircle(NCircle, X, Y, R);
+            CCircle = document.querySelector("#S0");
+            CCircle.setAttribute('cx', Xmid);
+            CCircle.setAttribute('cy', Ymid);
+            CCircle.setAttribute('r', (RS));
+            CCircle.setAttribute('fill', "white");
+            DIntercectPoint(R, "#Start", NCNID, D);
+            startCircle.setAttributeNS(null, "onclick", " ");
+            document.querySelector("#CenterLine").setAttributeNS(null, "style", "stroke:rgb(0,0,0);stroke-width:0");
+        }
+    ATxT = TxT.querySelector("#ZeroDay");
+    BTxT = TxT.querySelector("#NonDay");
+    }
+    
+    if (NumberOfCircles < 6) {
+        DIntercectPoint(R, "#Start", NCNID, C);
+        /*if (NumberOfCircles === 1){
+            CCircle = document.querySelector(Node);
+            X = CCircle.getAttribute('cx');
+            Y = CCircle.getAttribute('cy');
+            if (X < Xmid){
+                DIntercectPoint(R, "#Start", CCNID, D);
+            }
+        }*/
+        
+    }
+    TextChange(ATxT, BTxT);
+}
+
+function AllClick() {
+    var currentNode ="S" + Math.round(NumberOfCircles+1);
+    for (var leftoverNode=NumberOfCircles; leftoverNode < 60; leftoverNode++) {
+        Clicked(currentNode);
+        currentNode ="S" + Math.round(NumberOfCircles+1);
+    }
+}
+
+function cursorPoint(evt) {
+    var point = svg.createSVGPoint();
+    point.x = evt.clientX;
+    point.y = evt.clientY;
+    return point.matrixTransform(svg.getScreenCTM().inverse());
+}
+        
+svg.addEventListener('mousemove', function (evt) {
+    var line = document.querySelector('line'),
+        R = startCircle.getAttribute('r'),
+        loc = cursorPoint(evt),
+        x = loc.x - Xmid,
+        y = loc.y - Ymid,
+        SIGN = x / Math.abs(x),
+        theta = Math.atan(y / x);
+    line.setAttribute('x1', Xmid);
+    line.setAttribute('y1', Ymid);
+    x = SIGN * R * Math.cos(theta) + Xmid;
+    y = SIGN * R * Math.sin(theta) + Ymid;
+    line.setAttribute('x2', x);
+    line.setAttribute('y2', y);
+}, false);
