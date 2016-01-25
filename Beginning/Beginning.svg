@@ -1,0 +1,235 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="overflow: hidden; background-color:black; width:100%; height:100%; " onload="SetUp()" xml:lang="he">
+	<title>The Beginning</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="The Web Page of Luke's constructions, simulations, physics research and online connections." name="description" />
+    <meta content="Luke, Anthony, Burgess, Optic, Electronic, Optoelectronic, Electro-Optic, Computer, Programming, Simulation, Optical Processing, Optical Power Transmission, Signal, Image, Psi, modeling, physics" name="robots" />
+	
+    <style></style>
+    
+    <text dx="50" dy="10" fill="white" font-size="15" > ->Click on white dots as they show the connection points</text>
+    <g id="Scripture">
+        <g id="BGenesis">
+            <g y="1" id="NonDay" transform="translate(0, 0)">
+                <text dy="1.2em" x="99%" fill="white" font-size="15" direction="rtl">
+א בְּרֵאשִׁית, בָּרָא אֱלֹהִים, אֵת הַשָּׁמַיִם, וְאֵת הָאָרֶץ </text>
+                <text dy="2.4em" x="99%" fill="white" font-size="15" direction="rtl">
+ב וְהָאָרֶץ, הָיְתָה תֹהוּ וָבֹהוּ, וְחֹשֶׁךְ, עַל-פְּנֵי תְהוֹם </text>
+            </g>
+            <g y="-20000000000" id="ZeroDay" transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+... וְרוּחַ אֱלֹהִים, מְרַחֶפֶת עַל-פְּנֵי הַמָּיִם </text>
+            </g>
+            <g y="-20000000000" id="FirstDay" transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+ג וַיֹּאמֶר אֱלֹהִים, יְהִי אוֹר; וַיְהִי-אוֹר</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+ד וַיַּרְא אֱלֹהִים אֶת-הָאוֹר, כִּי-טוֹב</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+וַיַּבְדֵּל אֱלֹהִים, בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ</text>
+                <text dy="4.8em" x="99%" direction="rtl">
+ה וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם, וְלַחֹשֶׁךְ קָרָא לָיְלָה</text>
+                <text dy="6em" x="99%" direction="rtl">
+וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם אֶחָד</text>
+            </g>
+            <g  y="-20000000000" x="1" id="SecondDay" transform="translate(0, -10000000)"> 
+                <text dy="1.2em" x="99%" direction="rtl">
+ו וַיֹּאמֶר אֱלֹהִים, יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+וִיהִי מַבְדִּיל, בֵּין מַיִם לָמָיִם</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+ז וַיַּעַשׂ אֱלֹהִים, אֶת-הָרָקִיעַ, וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר </text>
+                <text dy="4.8em" x="99%" direction="rtl">
+מִתַּחַת לָרָקִיעַ, וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ; וַיְהִי-כֵן</text>
+                <text dy="6em" x="99%" direction="rtl">
+ח וַיִּקְרָא אֱלֹהִים לָרָקִיעַ, שָׁמָיִם; וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם שֵׁנִי</text>
+            </g>
+            <g y="-20000000000" x="1" id="ThirdDay" transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+ט וַיֹּאמֶר אֱלֹהִים, יִקָּווּ הַמַּיִם מִתַּחַת הַשָּׁמַיִם אֶל-מָקוֹם אֶחָד</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+וְתֵרָאֶה, הַיַּבָּשָׁה; וַיְהִי-כֵן</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+י וַיִּקְרָא אֱלֹהִים לַיַּבָּשָׁה אֶרֶץ, וּלְמִקְוֵה הַמַּיִם קָרָא יַמִּים</text>
+                <text dy="4.8em" x="99%" direction="rtl">
+וַיַּרְא אֱלֹהִים, כִּי-טוֹב</text>
+                <text dy="6em" x="99%" direction="rtl">
+יא וַיֹּאמֶר אֱלֹהִים, תַּדְשֵׁא הָאָרֶץ דֶּשֶׁא עֵשֶׂב מַזְרִיעַ זֶרַע</text>
+                <text dy="7.2em" x="99%" direction="rtl">
+עֵץ פְּרִי עֹשֶׂה פְּרִי לְמִינוֹ, אֲשֶׁר זַרְעוֹ-בוֹ עַל-הָאָרֶץ; וַיְהִי-כֵן</text>
+                <text dy="8.4em" x="99%" direction="rtl"> 
+יב וַתּוֹצֵא הָאָרֶץ דֶּשֶׁא עֵשֶׂב מַזְרִיעַ זֶרַע, לְמִינֵהוּ</text>
+                <text dy="9.6em" x="99%" direction="rtl"> 
+וְעֵץ עֹשֶׂה-פְּרִי אֲשֶׁר זַרְעוֹ-בוֹ, לְמִינֵהוּ; וַיַּרְא אֱלֹהִים, כִּי-טוֹב</text>
+                <text dy="10.8em" x="99%" direction="rtl"> 
+יג וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם שְׁלִישִׁי</text>
+            </g>
+            <g y="-20000000000" x="1" id="FourthDay" transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+יד וַיֹּאמֶר אֱלֹהִים, יְהִי מְאֹרֹת בִּרְקִיעַ הַשָּׁמַיִם, לְהַבְדִּיל, בֵּין הַיּוֹם וּבֵין הַלָּיְלָה</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים, וּלְיָמִים וְשָׁנִים.</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+טו וְהָיוּ לִמְאוֹרֹת בִּרְקִיעַ הַשָּׁמַיִם, לְהָאִיר עַל-הָאָרֶץ; וַיְהִי-כֵן</text>
+                <text dy="4.8em" x="99%" direction="rtl">
+טז וַיַּעַשׂ אֱלֹהִים, אֶת-שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים</text>
+                <text dy="6em" x="99%" direction="rtl">
+אֶת-הַמָּאוֹר הַגָּדֹל, לְמֶמְשֶׁלֶת הַיּוֹם,</text>
+                <text dy="7.2em" x="99%" direction="rtl">
+וְאֶת-הַמָּאוֹר הַקָּטֹן לְמֶמְשֶׁלֶת הַלַּיְלָה, וְאֵת הַכּוֹכָבִים</text>
+                <text dy="8.4em" x="99%" direction="rtl">
+יז וַיִּתֵּן אֹתָם אֱלֹהִים, בִּרְקִיעַ הַשָּׁמָיִם, לְהָאִיר, עַל-הָאָרֶץ</text>
+                <text dy="9.6em" x="99%" direction="rtl">
+יח וְלִמְשֹׁל, בַּיּוֹם וּבַלַּיְלָה, וּלְהַבְדִּיל,</text>
+                <text dy="10.8em" x="99%" direction="rtl">
+בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ; וַיַּרְא אֱלֹהִים, כִּי-טוֹב</text>
+                <text dy="12em" x="99%" direction="rtl">
+יט וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם רְבִיעִי</text>
+            </g>
+            <g y="-20000000000" x="1" id="FithDay"  transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+כ וַיֹּאמֶר אֱלֹהִים--יִשְׁרְצוּ הַמַּיִם, שֶׁרֶץ נֶפֶשׁ חַיָּה</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+וְעוֹף יְעוֹפֵף עַל-הָאָרֶץ, עַל-פְּנֵי רְקִיעַ הַשָּׁמָיִם</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+כא וַיִּבְרָא אֱלֹהִים, אֶת-הַתַּנִּינִם הַגְּדֹלִים</text>
+                <text dy="4.8em" x="99%" direction="rtl">
+וְאֵת כָּל-נֶפֶשׁ הַחַיָּה הָרֹמֶשֶׂת אֲשֶׁר שָׁרְצוּ הַמַּיִם לְמִינֵהֶם, וְאֵת</text>
+                <text dy="6em" x="99%" direction="rtl">
+כָּל-עוֹף כָּנָף לְמִינֵהוּ, וַיַּרְא אֱלֹהִים, כִּי-טוֹב</text>
+                <text dy="7.2em" x="99%" direction="rtl">
+כב וַיְבָרֶךְ אֹתָם אֱלֹהִים, לֵאמֹר</text>
+                <text dy="8.4em" x="99%" direction="rtl">
+פְּרוּ וּרְבוּ, וּמִלְאוּ אֶת-הַמַּיִם בַּיַּמִּים, וְהָעוֹף, יִרֶב בָּאָרֶץ</text>
+                <text dy="9.6em" x="99%" direction="rtl">
+כג וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם חֲמִישִׁי</text>
+            </g>
+            <g y="-20000000000" x="1" id="SixthDay"  transform="translate(0, -10000000)">
+                <text dy="1.2em" x="99%" direction="rtl">
+כד וַיֹּאמֶר אֱלֹהִים, תּוֹצֵא הָאָרֶץ נֶפֶשׁ חַיָּה לְמִינָהּ</text>
+                <text dy="2.4em" x="99%" direction="rtl">
+בְּהֵמָה וָרֶמֶשׂ וְחַיְתוֹ-אֶרֶץ, לְמִינָהּ; וַיְהִי-כֵן</text>
+                <text dy="3.6em" x="99%" direction="rtl">
+כה וַיַּעַשׂ אֱלֹהִים אֶת-חַיַּת הָאָרֶץ לְמִינָהּ, וְאֶת-הַבְּהֵמָה לְמִינָהּ</text>
+                <text dy="4.8em" x="99%" direction="rtl">
+וְאֵת כָּל-רֶמֶשׂ הָאֲדָמָה, לְמִינֵהוּ; וַיַּרְא אֱלֹהִים, כִּי-טוֹב</text>
+                <text dy="6em" x="99%" direction="rtl">
+כו וַיֹּאמֶר אֱלֹהִים, נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ</text>
+                <text dy="7.2em" x="99%" direction="rtl">
+וְיִרְדּוּ בִדְגַת הַיָּם וּבְעוֹף הַשָּׁמַיִם,</text>
+                <text dy="8.4em" x="99%" direction="rtl">
+וּבַבְּהֵמָה וּבְכָל-הָאָרֶץ, וּבְכָל-הָרֶמֶשׂ, הָרֹמֵשׂ עַל-הָאָרֶץ</text>
+                <text dy="9.6em" x="99%" direction="rtl">
+כז וַיִּבְרָא אֱלֹהִים אֶת-הָאָדָם בְּצַלְמוֹ,</text> 
+            </g>
+            <!--
+                <text dy="10.8em" x="99%" direction="rtl">
+בְּצֶלֶם אֱלֹהִים בָּרָא אֹתוֹ:  זָכָר וּנְקֵבָה, בָּרָא אֹתָם.</text>
+                <text dy="12em" x="99%" direction="rtl">
+כח וַיְבָרֶךְ אֹתָם, אֱלֹהִים, וַיֹּאמֶר לָהֶם אֱלֹהִים פְּרוּ וּרְבוּ וּמִלְאוּ אֶת-הָאָרֶץ, וְכִבְשֻׁהָ</text>
+                <text dy="13.2em" x="99%" direction="rtl">
+וּרְדוּ בִּדְגַת הַיָּם, וּבְעוֹף הַשָּׁמַיִם, וּבְכָל-חַיָּה, הָרֹמֶשֶׂת עַל-הָאָרֶץ</text>
+                <text dy="14.4em" x="99%" direction="rtl">
+כט וַיֹּאמֶר אֱלֹהִים, הִנֵּה נָתַתִּי לָכֶם אֶת-כָּל-עֵשֶׂב זֹרֵעַ זֶרַע אֲשֶׁר עַל-פְּנֵי כָל-הָאָרֶץ</text>
+                <text dy="15.6em" x="99%" direction="rtl">
+וְאֶת-כָּל-הָעֵץ אֲשֶׁר-בּוֹ פְרִי-עֵץ, זֹרֵעַ זָרַע:  לָכֶם יִהְיֶה, לְאָכְלָה</text>
+                <text dy="16.8em" x="99%" direction="rtl">
+ל וּלְכָל-חַיַּת הָאָרֶץ וּלְכָל-עוֹף הַשָּׁמַיִם וּלְכֹל רוֹמֵשׂ עַל-הָאָרֶץ</text>
+                <text dy="18em" x="99%" direction="rtl">
+אֲשֶׁר-בּוֹ נֶפֶשׁ חַיָּה, אֶת-כָּל-יֶרֶק עֵשֶׂב, לְאָכְלָה; וַיְהִי-כֵן</text>
+                <text dy="19.2em" x="99%" direction="rtl">
+לא וַיַּרְא אֱלֹהִים אֶת-כָּל-אֲשֶׁר עָשָׂה, וְהִנֵּה-טוֹב מְאֹד</text>
+                <text dy="20.4em" x="99%" direction="rtl">
+וַיְהִי-עֶרֶב וַיְהִי-בֹקֶר, יוֹם הַשִּׁשִּׁי</text>
+            </g>
+            <g y="-20000000000" id="SeventhDay"  transform="translate(0, -10000000)"> By the seventh day God had finished the work he had been doing; so on the seventh day he rested from all his work. Then God blessed the seventh day and made it holy, because on it he rested from all the work of creating that he had done. ... </g> 
+-->
+        </g>
+        <g id="Rsry">
+            <g y="-20000000000" id="Intro">
+            </g>
+            <g y="-20000000000" id="FirstMystery">
+            </g>
+            <g y="-20000000000" id="ThirdMystery">
+            </g>
+            <g y="-20000000000" id="FourthMystery">
+            </g>
+            <g y="-20000000000" id="FithMystery">
+            </g>
+        </g>
+    </g>
+    
+    <g id="Math">
+        <g id="Basic">
+        </g>
+    </g>
+    
+    <g id="Clues">
+    </g>
+    
+    <line x1="0" y1="0" x2="1" y2="1" style="stroke:rgb(255,0,255);stroke-width:2" id="CenterLine"/>
+
+    <circle cx="0" cy="40" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(0.7)" id="CLCA" />
+    <text dx="20" dy="40" fill="white" font-size="15" >0</text>
+    <circle cx="0" cy="120" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(1)" id="CLCB" />
+    <text dx="20" dy="120" fill="white" font-size="15" >1</text>
+    <circle cx="0" cy="200" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(2)" id="CLCC" />
+    <text dx="20" dy="200" fill="white" font-size="15" >2</text>
+    <circle cx="0" cy="280" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(3)" id="CLCD" />
+    <text dx="20" dy="280" fill="white" font-size="15" >3</text>
+    <circle cx="0" cy="360" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(4)" id="CLCE" />
+    <text dx="20" dy="360" fill="white" font-size="15" >4</text>
+    <circle cx="0" cy="440" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(5)" id="CLCF" />
+    <text dx="20" dy="440" fill="white" font-size="15" >5</text>
+    <circle cx="0" cy="520" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(6)" id="CLCG" />
+    <text dx="20" dy="520" fill="white" font-size="15" >6</text>
+    <circle cx="0" cy="600" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(7)" id="CLCH" />
+    <text dx="20" dy="600" fill="white" font-size="15" >7</text>
+    <circle cx="0" cy="680" r="40" stroke="white" stroke-width="1" fill-opacity="1" onclick="Shift(7.15)" id="CLCH" />
+    <text dx="20" dy="680" fill="white" font-size="15" >8</text>
+    <circle cx="0" cy="100%" r="40" stroke-width="0" fill="url(#grad)" onclick="UnShift()" id="ClickUn" />
+    <circle cx="100%" cy="100%" r="40" stroke-width="0" fill="url(#grad)" onclick="AllClick()" id="DoAll" />
+
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Seed" />
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Vault" />
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Frut" />
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Egg" />
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Tree" />
+    <circle cx="-25000" cy="-25000" r="0" stroke="white" stroke-width="1" fill-opacity="0" id="Flower" />
+    
+    <defs id="defs">
+        <radialGradient id="grad" cx="50%" cy="50%" r="100%" fx="50%" fy="50%">
+            <stop style="stop-color: rgb(255, 255, 255); stop-opacity: 1;" offset="0%" />
+            <stop style="stop-color: rgb(0, 0, 0); stop-opacity: 0;" offset="50%" />
+        </radialGradient>
+    </defs>
+    
+    
+    <g id="CSet">
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S0')" id="S0" onclick="Clicked('S0')" />
+    <circle cx="0" cy="0" r="25" stroke="white" stroke-width="0" fill="url(#grad)" id="Start" onmouseover="Mouse('Start')"  onclick="Clicked('Start')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S1')" id="S1" onclick="Clicked('S1')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S2')" id="S2" onclick="Clicked('S2')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S3')" id="S3" onclick="Clicked('S3')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S4')" id="S4" onclick="Clicked('S4')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S5')" id="S5" onclick="Clicked('S5')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S6')" id="S6" onclick="Clicked('S6')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S7')" id="S7" onclick="Clicked('S7')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S8')" id="S8" onclick="Clicked('S8')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S9')" id="S9" onclick="Clicked('S9')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S10')" id="S10" onclick="Clicked('S10')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S11')" id="S11" onclick="Clicked('S11')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S12')" id="S12" onclick="Clicked('S12')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S13')" id="S13" onclick="Clicked('S13')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S14')" id="S14" onclick="Clicked('S14')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S15')" id="S15" onclick="Clicked('S15')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S16')" id="S16" onclick="Clicked('S16')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S17')" id="S17" onclick="Clicked('S17')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S18')" id="S18" onclick="Clicked('S18')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S19')" id="S19" onclick="Clicked('S19')"/>
+    <circle cx="0" cy="-50000000" r="25" stroke="white" stroke-width="0" fill="url(#grad)" onmouseover="Mouse('S20')" id="S20" onclick="Clicked('S20')"/>
+    </g>
+    
+	<script xlink:href="Beginning.script" />
+</svg>
